@@ -1,0 +1,12 @@
+name: first-ci
+run-name: ${{github.actor}} is learning Github Actions
+on: [push]
+jobs:
+  its-not-my-name:
+    runs-on: ubunto-latest
+    steps:
+      - uses: actions/checkout@3
+      - uses: actions/setup-node@3
+        with:
+          node-version: '18'
+        - run: npm run echo
